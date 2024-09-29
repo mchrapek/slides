@@ -4,6 +4,13 @@ interface PostForm {
   metadata: {
     created: Date,
     publisherId: number;
+  },
+  author: {
+    id: number;
+    username: {
+      firstName: string;
+      secondName: string;
+    }
   }
 }
 

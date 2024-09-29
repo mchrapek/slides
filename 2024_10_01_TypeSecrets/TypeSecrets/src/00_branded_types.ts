@@ -5,12 +5,11 @@ type User = {
 
 type Post = {
   id: number;
-  ownerId: number;
-  title: string
+  name: string
 }
 
 
-async function fetchComments(postId: number, userId: number) {
+async function fetchComments(post: Post, user: User) {
   // fetching comments
 }
 
@@ -22,9 +21,8 @@ const user: User = {
 
 const post: Post = {
   id: 50,
-  ownerId: 2,
-  title: 'TypeSecret'
+  name: 'TypeSecret'
 }
 
-const commentsBad = fetchComments(user.id, post.id)
-const commentsGood = fetchComments(post.id, user.id)
+const commentsBad = fetchComments(user, post)
+const commentsGood = fetchComments(post, user)
